@@ -28,7 +28,9 @@ cacheSolve <- function(x, ...) {
                 return(m)
         }
         data <- x$get()
-        m <- solve(data, ...)
+        
+        m <- solve(data, ...) #This function finds inverse of matrix provided input matrix should be square & inversible.
+        #Basically determinant of input matrix should not be zero.
         x$setinv(m)
         m        
 }
